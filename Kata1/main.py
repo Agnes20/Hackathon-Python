@@ -9,6 +9,6 @@ print("kata1")
 7.- git config --global user.name "Name"
 8.- git config --global user.email "Email"
 9.- Crear Carpetas de Kata 1 al 4 con main.Python
-10.- Hacer un Commit
+10.- Hacer un Commit -> git push
 Extra.- git log (para ver los commit realizados)
 """
