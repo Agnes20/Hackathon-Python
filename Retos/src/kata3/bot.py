@@ -41,19 +41,19 @@ def main():
     updater = Updater(token=open("./bot_token").read(), use_context=True)
 
     # Es el Registro de Comandos a través del dispartcher
-    dp=updater.dispatcher.add_handler(CommandHandler("start",start))#añadiendo un menejador de comando /start
-    dp=updater.dispatcher.add_handler(CommandHandler("help",help)) #añadiendo un menejador de comando /help
-    dp=updater.dispatcher.add_handler(CommandHandler("mayus",mayus)) #añadiendo un menejador de comando /mayuscula
-    dp=updater.dispatcher.add_handler(CommandHandler("alreves",alreves)) #añadiendo un menejador de comando /alreves
+    dp=updater.dispatcher
 
     # Añadimos a la lista de Registro todos los comandos con su función [start - help - mayus]
-    
-    lista = [start,help,mayus]
-
+    dp.add_handler(CommandHandler("start",start))#añadiendo un menejador de comando /start
+    dp.add_handler(CommandHandler("help",help)) #añadiendo un menejador de comando /help
+    dp.add_handler(CommandHandler("mayus",mayus)) #añadiendo un menejador de comando /mayuscula
+    dp.add_handler(CommandHandler("alreves",alreves)) #añadiendo un menejador de comando /alreves
 
     # Este comando es un Trigger que se lanza cuando no hay comandos [alreves]
     #
-    
+    if alreves == ' ':
+        updater.message.reply_text(' ')
+
     # Y este espera al error
     dp.add_error_handler(error)
 
