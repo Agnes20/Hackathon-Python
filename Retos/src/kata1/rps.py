@@ -37,6 +37,7 @@ def Game():
     #programar
     player = input("Escribe una opcion [0.Piedra - 1.Papel - 2.Tijera]: ")
     ai = randint(0,2)
+    ai = options[ai]
     print("AI :"+ str(ai))
     winner = quienGana(player, ai)
      
