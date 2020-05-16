@@ -41,10 +41,10 @@ def main():
     updater = Updater(token=open("./bot_token").read(), use_context=True)
 
     # Es el Registro de Comandos a través del dispartcher
-    updater.dispatcher.add_handler(CommandHandler("start",start))#añadiendo un menejador de comando /start
-    updater.dispatcher.add_handler(CommandHandler("help",help)) #añadiendo un menejador de comando /help
-    updater.dispatcher.add_handler(CommandHandler("mayus",mayus)) #añadiendo un menejador de comando /mayuscula
-    updater.dispatcher.add_handler(CommandHandler("alreves",alreves)) #añadiendo un menejador de comando /alreves
+    dp=updater.dispatcher.add_handler(CommandHandler("start",start))#añadiendo un menejador de comando /start
+    dp=updater.dispatcher.add_handler(CommandHandler("help",help)) #añadiendo un menejador de comando /help
+    dp=updater.dispatcher.add_handler(CommandHandler("mayus",mayus)) #añadiendo un menejador de comando /mayuscula
+    dp=updater.dispatcher.add_handler(CommandHandler("alreves",alreves)) #añadiendo un menejador de comando /alreves
 
     # Añadimos a la lista de Registro todos los comandos con su función [start - help - mayus]
     
