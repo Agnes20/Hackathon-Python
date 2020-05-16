@@ -2,7 +2,6 @@ from telegram.ext import Updater, CommandHandler
 
 def main():
     #carpeta bot_token el key del bot, gestionar comunicacion a telegram
-    #1228371718:AAGyE0yOHough2oAPinH0RnkVSRuWcvd4bI
     updater = Updater(token=open("./bot_token").read(), use_context=True)
     updater.dispatcher.add_handler(CommandHandler("start",start))#añadiendo un menejador de comando /start
     updater.dispatcher.add_handler(CommandHandler("repite",repite)) #añadiendo un menejador de comando /repite
