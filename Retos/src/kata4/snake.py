@@ -51,7 +51,7 @@ class Game():
     def exit(self, event, pygame):
         #
         
-    
+        return " "
     # Posición aleatorio entre el ranto [0,49] * 10  
     def food_spawn(self):
         self.food_pos = 0
@@ -64,7 +64,7 @@ class Game():
         #    
         #
         #  
-
+        return " "
     # Mensajes de salida cuando el snake muere
     # Posición snake[0] >= 500 ó snake[0] <= 0                  -> Muere
     # Posición snake[1] >= 500 ó snake[1] <= 0                  -> Muere
@@ -80,7 +80,6 @@ class Game():
 
            pygame.display.update()
            time.sleep(2)
-            
 # Entry Point
 def main():
     # Descomentar para lanzar el juego en local
