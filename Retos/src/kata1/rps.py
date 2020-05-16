@@ -13,8 +13,6 @@ def quienGana(player, ai):
     tijeras = '2'
     player = str(player)
     ai = str(ai)
-    print("AI1: " + str(ai))
-    print("player: " + str(player))
     if player == piedra:
         if ai == piedra:
             resultado = 'Empate!'
@@ -35,10 +33,11 @@ def quienGana(player, ai):
 # Entry Point
 def Game():
     #programar
-    player = input("Escribe una opcion [0.Piedra - 1.Papel - 2.Tijera]: ")
+    #player = input("Escribe una opcion [0.Piedra - 1.Papel - 2.Tijera]: ")
+    player = options[1]
     ai = randint(0,2)
-    ai = options[ai]
-    print("AI :"+ str(ai))
+    print("AI: "+ str(ai))
+    print("Player: "+ player)
     winner = quienGana(player, ai)
      
     print(winner)
