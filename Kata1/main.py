@@ -1,1 +1,1 @@
-print("Kata1")
+print("Kata1.")
